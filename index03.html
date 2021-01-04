@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .boxindes {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        .imgsbox1 {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .span01 {
+            width: 100%;
+            margin: auto;
+            font-size: 15px;
+            text-align: center;
+            color: rgb(255, 187, 0);
+            padding-bottom: 10px;
+            /* background-color: red; */
+            background: url(./image/bg1.jpg)no-repeat 0 0/cover;
+        }
+
+        .h1text {
+            width: 100%;
+            background: url(./image/bg1.jpg)no-repeat 0 0/cover;
+        }
+
+        .h101 {
+            width: 60%;
+            margin: auto;
+            font-size: 18px;
+            text-align: center;
+            border-top: solid red 3px;
+            border-left: solid red 3px;
+            border-right: solid red 3px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .maindix {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url(./image/bg1.jpg)no-repeat 0 0/cover;
+        }
+
+        .divbox {
+            width: 60%;
+            border-bottom: none;
+            border-left: solid red 3px;
+            border-right: solid red 3px;
+        }
+
+        .divbox:last-child {
+            border-bottom: solid red 3px;
+        }
+
+        .imgtext {
+            width: 100%;
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+        }
+
+        .textimg {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .textimg {
+            width: 90%;
+            border: solid 1px #ccc;
+            background-color: white;
+        }
+
+        .textimg2 img {
+            width: 30%;
+        }
+
+        .spanlist {
+            width: 100%;
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+            margin-bottom: 10px;
+            font-weight: bolder;
+            line-height: 16px;
+            font-size: 14px;
+            justify-content: flex-start;
+        }
+
+        .listspans {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .textdh {
+            width: 90%;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 20px;
+            border-radius: 3px;
+            color: rgb(255, 187, 0);
+            background-color: rgb(252, 36, 36);
+        }
+
+        .choujiangs {
+            width: 100%;
+            display: flex;
+            font-size: 30px;
+            justify-content: center;
+            margin: 0 auto;
+            padding-top: 30px;
+            background: url(./image/九宫格_05.jpg) no-repeat 0 0/100%;
+        }
+
+        .cj {
+            width: 60%;
+            height: 100%;
+            text-align: center;
+            color: rgb(255, 187, 0);
+            background-color: red;
+            font-size: 20px;
+            padding: 20px auto;
+            margin: 10px auto;
+            background: url(./image/4.png)no-repeat 0 100%/cover;
+        }
+
+        .alerttext {
+            width: 25%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 50%;
+            left: 38%;
+            border-radius: 3px;
+            flex-direction: column;
+            border: solid #ccc 1px;
+            display: none;
+        }
+
+        .buts {
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+
+        .buts input {
+            width: 50%;
+            border: none;
+            outline-style: none;
+            user-select: none;
+            cursor: pointer;
+            margin: 5px auto;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .buts input:nth-child(1) {
+            border-top: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+
+        .buts input:nth-child(2) {
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+        }
+
+        .input01 {
+            width: 80%;
+            height: 25px;
+            outline-style: none;
+
+        }
+
+        .ptext1 {
+            color: red;
+            font-size: 16px;
+            user-select: none;
+            margin: 5px auto;
+            text-align: center;
+            display: none;
+        }
+
+        .dhm {
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            margin: 10px auto;
+            user-select: none;
+
+        }
+
+        /* PC */
+        @media screen and (min-width: 992px) {
+            .textdh {
+                padding-top: 17px;
+                padding-bottom: 17px;
+            }
+
+           
+            .cj {
+                width: 50%;
+                line-height: 160px;
+
+            }
+
+            .choujiangs {
+                padding-top: none;
+            }
+
+            .span01 {
+                font-size: 30px;
+            }
+        }
+
+        /* 移动端 */
+        @media screen and (max-width: 768px) {
+            .boxindes {
+                width: 94%;
+            }
+
+            .h101 {
+                width: 80%;
+            }
+
+            .divbox {
+                width: 80%;
+
+            }
+
+            .cj {
+                width: 71%;
+                line-height: 70px;
+
+            }
+
+            .choujiangs {
+                padding-top: none;
+            }
+
+            .textdh {
+                font-size: 25px;
+                border-radius: 5px;
+            }
+
+            .alerttext {
+                width: 44%;
+                left: 28%;
+            }
+
+            .input01 {
+                margin: 15px;
+            }
+
+            .ptext1 {
+                margin: none;
+            }
+        }
+
+        /* ipad */
+        @media screen and (min-width: 768px)and (max-width: 992px) {
+            .cj {
+                padding: 30px auto;
+                width: 71%;
+                line-height: 142px;
+                margin: 10px auto;
+                font-size: 40px;
+            }
+            .textdh {
+                font-size: 37px;
+            }
+            .spanlist{
+                line-height: 33px;
+                font-size: 22px;
+            }
+            .h101{
+                font-size: 40px;
+                color: red;
+            }
+            .span01{
+                font-size: 28px;
+            }
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script>
+        $(function () {
+            $(".maindix .divbox").each(function (itd, valus) {
+                $(".textdh").eq(itd).click(function () {
+                    // display: block;
+                    $(".alerttext").css("display", "block");
+
+                    $(".bust1").click(function () {
+                        if ($(".input01").val() == "301") {
+                            $(".textdh").eq(itd).html("已兑换");
+                            $(".alerttext").css("display", "none");
+                            return true
+                        } else {
+                            $(".ptext1").css("display", "block");
+                            $(".ptext1").html("兑换码错误！").css("color", "red")
+                            return false
+                        }
+                    })
+                })
+            })
+
+            $(".bust2").click(function () {
+                $(".ptext1").html("");
+                $(".alerttext").css("display", "none");
+            });
+
+
+            $(".cj").click(function () {
+                location.href = "/index2.html"
+            })
+        })
+
+
+    </script>
+</head>
+
+<body>
+    <div class="boxindes">
+        <img class="imgsbox1" src="./image/九宫格_02.jpg" alt="">
+        <span class="span01">游戏规则</span>
+        <div class="h1text">
+            <h1 class="h101">我的奖品</h1>
+        </div>
+        <!-- 奖品栏 -->
+        <div class="maindix">
+            <div class="divbox">
+                <div class="imgtext">
+                    <div class="textimg">
+                        <div class="textimg2">
+                            <img src="./image/黄封村人参酒两瓶.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="spanlist">
+                        <div class="listspans">
+                            <span>奖品：<i>武功秘籍一份</i></span>
+                            <span>中奖时间：<i>2020年12月30日</i></span>
+                            <span>兑奖时间 <i>截至到2020年12月12日</i></span>
+                            <span>兑奖地址：<i>广西贺州市八步区</i></span>
+                            <span>联系电话：<i>19877989690</i></span>
+                        </div>
+                    </div>
+                    <div id="text01" class="textdh">立即兑换</div>
+                </div>
+            </div>
+
+            <!--  -->
+            <div class="divbox">
+                <div class="imgtext">
+                    <div class="textimg">
+                        <div class="textimg2">
+                            <img src="./image/黄封村人参酒两瓶.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="spanlist">
+                        <div class="listspans">
+                            <span>奖品：<i>武功秘籍一份</i></span>
+                            <span>中奖时间：<i>2020年12月30日</i></span>
+                            <span>兑奖时间 <i>截至到2020年12月12日</i></span>
+                            <span>兑奖地址：<i>广西贺州市八步区</i></span>
+                            <span>联系电话：<i>19877989690</i></span>
+                        </div>
+                    </div>
+                    <div class="textdh">立即兑换</div>
+                </div>
+            </div>
+            <!--  -->
+
+
+
+
+
+            <!-- 3 -->
+            <div class="divbox">
+                <div class="imgtext">
+                    <div class="textimg">
+                        <div class="textimg2">
+                            <img src="./image/黄封村人参酒两瓶.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="spanlist">
+                        <div class="listspans">
+                            <span>奖品：<i>武功秘籍一份</i></span>
+                            <span>中奖时间：<i>2020年12月30日</i></span>
+                            <span>兑奖时间 <i>截至到2020年12月12日</i></span>
+                            <span>兑奖地址：<i>广西贺州市八步区</i></span>
+                            <span>联系电话：<i>19877989690</i></span>
+                        </div>
+                    </div>
+                    <div class="textdh">立即兑换</div>
+                </div>
+            </div>
+
+
+            <!-- 3 -->
+
+    </div>
+        <div class="choujiangs">
+
+            <div class="cj">继续抽奖</div>
+        </div>
+    </div>
+
+    <!-- 弹框 -->
+    <div class="alerttext">
+        <h1 class="dhm">兑换码</h1>
+        <input class="input01" id="oputsindex3" type="text" value="">
+        <p class="ptext1">兑换码错误！</p>
+        <div class="buts">
+            <input class="bust1" type="button" value="确认">
+            <input class="bust2" type="button" value="取消">
+        </div>
+    </div>
+
+</body>
+
+</html>

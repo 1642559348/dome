@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            user-select: none;
+            box-sizing: border-box;
+        }
+
+        .index2_box1 {
+            width: 60%;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            background: url(./image/九宫格_03.jpg)no-repeat 0 0/cover;
+        }
+
+        .index2_box1 .imgindex01 {
+            width: 100%;
+        }
+
+        .choujiang {
+            width: 80%;
+            display: flex;
+            color: white;
+            font-size: 15px;
+            margin: 10px auto;
+            color: rgb(255, 140, 8);
+            justify-content: space-around;
+        }
+
+        .posdis {
+            width: 80%;
+            display: flex;
+            left: 0%;
+            top: 0;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .posdis img {
+            width: 100%;
+            height: 30px;
+        }
+
+        .jiangp {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            left: 0;
+            font-size: 16px;
+            color: rgb(255, 140, 8);
+
+        }
+
+        .imglist {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+            border: 3px solid red;
+            background-color: white;
+
+        }
+
+        .list_img {
+            width: 100%;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            display: flex;
+        }
+
+        .imglist img {
+            width: 30%;
+            margin: 5px auto;
+            cursor: pointer;
+
+        }
+
+        .list_li {
+            width: 60%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin: 0 auto;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 100px;
+
+
+        }
+
+        .imgdsp {
+            width: 100%;
+            height: 234px;
+            position: relative;
+        }
+
+        .oul {
+            width: 100%;
+            height: 30%;
+            margin: 0 auto;
+            position: absolute;
+            overflow: hidden;
+            border: solid 3px rgb(255, 0, 0);
+            background-color: white;
+        }
+
+        .ovhid {
+            width: 100%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            position: relative;
+        }
+
+        .posli {
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            list-style: none;
+        }
+
+
+
+
+        .h1s {
+            padding-left: 0px;
+            color: red;
+            font-size: 25px;
+            font-weight: 800;
+            z-index: 1;
+        }
+
+        .oul li {
+            list-style: none;
+            line-height: 18px;
+            width: 100%;
+        }
+
+        .indextext2 {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            position: absolute;
+            top: 60%;
+            left: 30%;
+            display: none;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .index_z {
+            width: 60%;
+            height: 200%;
+            position: absolute;
+            ;
+            top: 0;
+            left: 20%;
+            z-index: 1;
+            display: block;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .shuxuxingxi {
+            width: 100%;
+            text-align: center;
+        }
+
+        .divtext02 {
+            width: 90%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
+        }
+
+        .inputsdenx {
+            width: 99%;
+            height: 30px;
+            border-radius: 3px;
+            outline-style: none;
+        }
+
+        .oinupts23 {
+            width: 100%;
+            display: flex;
+            padding-bottom: 30px;
+        }
+
+        .oinupts23 input {
+            width: 50%;
+            height: 30px;
+            display: flex;
+            outline-style: none;
+            justify-content: center;
+            justify-content: space-around;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .oinupts23 input:nth-child(1) {
+            border: none;
+
+            border-top: solid #cccccc 1px;
+            border-right: solid #cccccc 1px;
+        }
+
+        .oinupts23 input:nth-child(2) {
+            border: none;
+
+            border-top: solid #cccccc 1px;
+            border-left: solid #cccccc 1px;
+        }
+
+        .textbo12x {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            /* z-index: 2; */
+            top: 30%;
+            left: 30%;
+            position: absolute;
+            text-align: center;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .textsrcimg {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .textsrcimg {
+            display: flex;
+            margin: 0 auto;
+            width: 80%;
+            border: 1px solid #ccc;
+        }
+
+        .borderimg img {
+            width: 50%;
+            text-align: center;
+        }
+
+        .obuts1 {
+            height: 30px;
+            margin: 0 auto;
+            width: 60%;
+            outline-style: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: red;
+
+            background-color: white;
+
+        }
+        .guize{
+            width: 30%;
+            height: 300px;
+            display: flex;
+            position: absolute;
+            left: 50%;
+            top:38%;
+            border-radius: 5px;
+            flex-direction: column;
+            display: none;
+            overflow: auto;
+            cursor: pointer;
+            background-color: rgb(49, 39, 39);
+        }
+        .guize:hover{
+            color: white;
+        }
+        .gz{
+            width: 100%;
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+        }
+        .qued{
+            width: 100%;
+            display: flex;
+            font-size: 20px;
+            border: 1px white solid;
+            justify-content: center;
+        }
+        .qued:hover{
+            color: red;
+        }
+        .wenzi{
+            width: 90%;
+            
+            justify-content: center;
+        }
+        .idguz{
+            cursor: pointer;
+        }
+
+
+        /* PC */
+        @media screen and (min-width: 992px) {
+            .oul {
+                width: 48%;
+                height: 35%;
+            }
+
+            .imgdsp {
+                width: 100%;
+                height: 20%;
+            }
+
+            .posdis img {
+                height: 70px;
+            }
+
+            .indextext2 {
+                width: 30%;
+                top: 60%;
+                left: 35%;
+            }
+            .oul {
+                width: 48%;
+                height: 61%;
+            }
+            .posli li{
+            width: 100%;
+            font-size: 20px;
+            line-height: 50px;
+         
+        }
+
+            
+        }
+
+        /* 移动端 */
+        @media screen and (max-width: 768px) {
+            .oul {
+                height: 25%;
+            }
+
+            .index2_box1 {
+                width: 92%;
+            }
+
+            .indextext2 {
+                top: 45%;
+            }
+
+            .list_li {
+                width: 92%;
+            }
+
+            .oul {
+                width: 73%;
+            }
+
+            .posdis img {
+
+             height: 73px;
+            }
+            .jiangp {
+                font-size: 27px;
+            }
+            .indextext2 {
+                width: 56%;
+                left: 22%;
+            }
+            .textbo12x {
+                width: 64%;
+                left: 18%;
+            }
+            .guize{
+                width: 60%;
+                left: 30%;
+            }
+        }
+
+        /* ipad */
+        @media screen and (min-width:768px) and (max-width:992px) {
+            .oul {
+                width: 48%;
+                height: 21%;
+            }
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script>
+        $(function () {
+            var times = null, times2 = null;
+            var i = 1
+            var nameId;
+            var num = 2;
+            var arr = [];
+            //拿到中奖图片
+            var srcs, alts;
+            //创建对象地址
+            textobj = {
+                imgtext01: [
+                    {
+                        title: "价值120元黄封村人梦酒",
+                        Address: "地址： 山东烟台市莱州市文昌北路老十八乐南，第37068345号销售网点",
+                        Becareful: "异地号码，非正常在用号码,已经有相同的流量包套餐不能使用"
+                    },
+                    {
+                        title: "菜沃口腔储值卡",
+                        Address: "地址： 山东烟台市莱州市文昌北路老十八乐南，第37068345号销售网点",
+                        Becareful: "异地号码，非正常在用号码,已经有相同的流量包套餐不能使用"
+                    },
+                    {
+                        title: "50元中国联通流量卡",
+                        Address: "地址： 山东烟台市莱州市文昌北路老十八乐南，第37068345号销售网点",
+                        Becareful: "异地号码，非正常在用号码,已经有相同的流量包套餐不能使用"
+                    },
+                    // 4
+                    {
+
+                        title: "50元蛋壳科技VR体验卡",
+                        Address: "地址： 山东烟台市莱州市文昌北路老十八乐南，第37068345号销售网点",
+                        Becareful: "异地号码，非正常在用号码,已经有相同的流量包套餐不能使用"
+                    },
+                    // 5
+                    {
+                        title: "谢谢参与",
+                        Address: "没中奖你玩的愉快",
+                        Becareful: "哈哈哈哈"
+                    },
+                    // 6
+                    {
+                        title: "2000元圣诞瑜伽SPA会所储蓄卡",
+                        Address: "地址： 山东烟台市莱州市文昌北路老十八乐南，第37068345号销售网点",
+                        Becareful: "异地号码，非正常在用号码,已经有相同的流量包套餐不能使用"
+                    },
+                    // 7
+                    {
+                        title: "300元陶进二胡工作室",
+                        Address: "地址： 山东烟台市莱州市文昌北路老十八乐南，第37068345号销售网点",
+                        Becareful: "异地号码，非正常在用号码,已经有相同的流量包套餐不能使用"
+                    },
+                    // 8
+                    {
+                        title: "100元 SSS 俱乐部体验卡",
+                        Address: "地址： 山东烟台市莱州市文昌北路老十八乐南，第37068345号销售网点",
+                        Becareful: "异地号码，非正常在用号码,已经有相同的流量包套餐不能使用"
+                    },
+                ],
+
+            }
+
+            //点击之后存储的数据
+            text02obj = {}
+
+            // console.log(textobj.imgtext01)
+            clearInterval(times)
+            // 文字滚动
+            
+            $(".list_img img").eq(4).bind("click", a)
+            function a() {
+                //限制次数
+                if (num < 0) {
+                    alert("次数用完了")
+                    $(".list_img img").css("pointer-event", "none")
+                } else {
+
+                    $(".nums").html(num + "次")
+                    console.log(num)
+                    num--
+                    ////边框滚动
+                    times = setInterval(function () {
+                        imgborder()
+                    }, 80);
+                    var rad = parseInt(Math.random() * 3000 + 1000)
+                    times2 = setTimeout(function () {
+                        clearInterval(times);
+                        clearTimeout(times2);
+                        //输出当前的值
+                        //清空数组
+                        arr.splice(0, arr.length);
+                        $(".list_img img").each(function (indexs, vales) {
+                            arr.push($(this).css("border"))
+                        })
+                        $(".list_img img").eq(4).bind("click", a)
+                        arr.forEach(function (value, index) {
+                            // console.log(index+":"+value);
+                            if (value == "3px solid rgb(255, 0, 0)") {
+                                console.log(index + ":" + value)
+                                //拿到中奖的信息
+                                srcs = $(".list_img img").eq(index).attr("src")
+                                console.log($(".list_img img").eq(index).attr("src"))
+                                //   display: block;
+                                $(".textbo12x").css("display", "block");
+                                //设置图片
+                                $(".imgblock").prop("src", srcs);
+                                //通过对象设置文字
+                                console.log(textobj.imgtext01[index])
+
+                                console.log("********奖品*********")
+                                $(".textalt").html(textobj.imgtext01[index].title + "<br/>");
+                                console.log("********地址*********")
+                                console.log(textobj.imgtext01[index].Address);
+                                $(".dizi").html(textobj.imgtext01[index].Address + "<br/>");
+                                console.log("********注意事项*********")
+                                console.log(textobj.imgtext01[index].Becareful);
+                                $(".zuyi").html(textobj.imgtext01[index].Becareful + "<br/>");
+
+                                //存储数据 创建cookie
+
+                                var valus = $(".textalt").html(textobj.imgtext01[index].title)
+                                var values = $.cookie("id", valus);  // 创建 cookie
+                                console.log($.cookie("id", valus))    // 读取 cookie
+                                alert("存储数据中。。。。")
+
+                                //点击关闭
+                                $(".obuts1").click(function () {
+                                    $(".textbo12x").css("display", "none");
+                                })
+                            }
+                        });
+                    }, rad);
+
+                }
+            }
+
+            // 我的奖品
+            $(".jiangp").click(function () {
+                $(".indextext2").css("display", "block");
+            })
+
+            // 规则
+            $(".idguz").click(function(){
+                $(".guize").show()
+            })
+            $(".qued").click(function(){
+                $(".guize").hide()
+            })
+
+
+            $("#but01").click(function () {
+                //判断为空
+
+                var myname = /^[^\d]+[\u4e00-\u9fa5]{0,10}$/g;
+                //判断// 19877989690 验证手机号
+                var telnum = /^[1][3,4,5,7,8,9][0-9]{9}$/g;
+
+                if ($(".texts01").val() != "") {
+                    if (!myname.test($(".texts01").val())) {
+                        $(".te1").html("错误！").css("color", "red");
+                        return false;
+                    } else {
+                        $(".te1").css("display","none")
+                        if ($(".texts02").val() != "") {
+                            if (!telnum.test($(".texts02").val())) {
+                                $(".te2").html("输入错误！！！").css("color", "red");
+                                return false;
+                            } else {
+
+                                $(".te2").html("对了跳转");
+                                location.href = "/index03.html"
+                                return true;
+                            }
+                        } else {
+                            $(".te2").html("电话号码不能为空！！！").css("color", "red");
+                            return false;
+                        }
+                    }
+                }
+
+                if ($(".texts01").val() == "" || $(".texts02").val() == "") {
+                    $(".te1").html("姓名不能为空！").css("color", "red");
+                    $(".te2").html("电话号码不能为空！").css("color", "red");
+                }
+
+            })
+
+            $("#but02").click(function () {
+                $(".indextext2").css("display", "none");
+                $(".te1").html("")
+                $(".te2").html("")
+            })
+
+            // 文字滚动
+            var h = $(".posli").height();
+
+            //已发出的奖品向上移动
+            var jtop=0;
+            setInterval(function(){
+                jtop=jtop-1;
+                $(".posli").css("top",jtop);
+                if(jtop<=-126){
+                    jtop=100;
+                    $(".posli").css("top",jtop);
+                }
+            },50)
+           
+
+            //边框滚动
+            function imgborder() {
+                $(".list_img img").eq(4).unbind("click", a)
+                $(".list_img img").each(function (id, values) {
+                    nameId = $(".list_img img").eq(id).attr("name");
+                    if (i == nameId) {
+                        $(".list_img img").eq(id).siblings().css("border", "none");
+                        $(".list_img img").eq(id).css("border", "solid red 3px");
+                    }
+
+                })
+                if (i >= 8) {
+                    i = 0
+                }
+                i++
+
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div class="index2_box1">
+        <img class="imgindex01" src="./image/九宫格_02.jpg" alt="">
+        <div class="choujiang">
+            <span>抽奖次数</span>
+            <span class="nums">3次</span>
+            <span class="idguz">游戏规则</span>
+        </div>
+        <div class="imglist">
+            <div class="list_img">
+                <img name="1" src="./image/sudoku_01.jpg" alt="价值120元黄封村人梦酒">
+                <img name="2" src="./image/sudoku_02.jpg" alt="菜沃口腔储值卡">
+                <img name="3" src="./image/sudoku_03.jpg" alt="50元中国联通流量卡">
+                <img name="8" src="./image/sudoku_04.jpg" alt="100元 SSS 俱乐部体验卡">
+                <img name="0" src="./image/sudoku_05.jpg" alt="">
+                <img name="4" src="./image/sudoku_06.jpg" alt="2000元圣诞瑜伽SPA会所储蓄卡">
+                <img name="7" src="./image/sudoku_07.jpg" alt="300元陶进二胡工作室">
+                <img name="6" src="./image/sudoku_08.jpg" alt="50元蛋壳科技VR体验卡">
+                <img name="5" src="./image/sudoku_09.jpg" alt="谢谢参与">
+            </div>
+        </div>
+        <div class="posdis">
+            <img src="./image/4.png" alt="">
+            <h2 class="jiangp">我的奖品</h2>
+        </div>
+    </div>
+    <div class="list_li">
+        <img class="imgdsp" src="./image/九宫格_05.jpg" alt="">
+        <ul class="oul">
+            <h1 class="h1s">已发出的奖品</h1>
+            <div class="ovhid">
+                <ul class="posli">
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    <li>137**********5452获得天山雪莲一份</li>
+                    
+                </ul>
+            </div>
+        </ul>
+    </div>
+
+    <!-- 输入信息跳转  -->
+    <!-- index_z -->
+    <div>
+        <div class="indextext2">
+            <h2 class="shuxuxingxi">输入信息</h2>
+            <div class="divtext02">
+                <p>姓名：</p>
+                <input class="inputsdenx texts01" type="text" placeholder="请输入你的真实姓名">
+                <p class="te1"></p>
+
+                <p>手机号：</p>
+                <input class="inputsdenx texts02" type="text" placeholder="请输入你的手机号">
+                <p class="te2"></p>
+                <div class="oinupts23">
+                    <input id="but01" type="button" value="确认">
+                    <input id="but02" type="button" value="取消">
+                </div>
+            </div>
+        </div>
+
+        <!-- 中奖提示  -->
+        <div class="textbo12x">
+            <p>提示</p>
+            <h2>恭喜你中奖了</h2>
+            <div class="textsrcimg">
+                <div class="borderimg">
+                    <img class="imgblock" src="./image/蛋壳科技VR体验卡.png" alt="">
+                </div>
+            </div>
+            <p class="textalt">移动联通流量卡50元</p>
+            <div>
+                <p class="dizi"></p>
+                <p class="zuyi"></p>
+            </div>
+            <hr>
+            <input class="obuts1" type="button" value="确认">
+        </div>
+    </div>
+
+
+<!--规则  -->
+
+        <div class="guize" id="guz">
+            <p class="gz">游戏规则</p>
+            <div class="wenzi">
+                1. 每名客户每天抽奖有3次机会，点击转盘的【开始抽奖】按钮进行抽奖，转动结束停留的位置就是您获得的奖品；
+                <br />
+                2. 中奖后需填写姓名、电话，兑奖时根据您的填写的信息进行现场兑奖，具体奖项如下：
+                <br />
+                黄封村人参酒两瓶：共100份，总价值12000元
+                <br />
+                莱沃口腔储值卡：共50份，总价值10000元
+                <br />
+                中国联通流量卡：共200份，总价值10000元
+                <br />
+                S5健身俱乐部贵宾卡：共有80份，总价值8000元
+                <br />
+                圣雅瑜伽SPA会所储值卡：共3份，总价值6000元
+                <br />
+                陶进二胡工作室：共20份，总价值6000元
+                <br />
+                蛋壳科技VR体验卡：共50份，总价值2500元
+                <br />
+                3. 抽奖时间：
+                <br />
+                2021年1月1日~3日游戏时间：每天10：00~23：59：59
+                <br />
+                4. 各奖品兑奖方式及时间不同，具体如下：
+                <br />
+                1) 黄封村人参酒
+                <br />
+                兑奖时间：截止到2021年2月26日
+                <br />
+                兑奖地址：吉林省酒文化博物馆（亚泰大街9699号）
+                <br />
+                联系电话：0431-88508899
+                <br />
+                2) 莱沃口腔储值卡
+                <br />
+                兑奖时间：截止到2021年2月31日
+                <br />
+                兑奖地址：工农大路1780号（省中医院东侧）
+                <br />
+                联系电话：0431—89545888
+                <br />
+                注：洗牙4次（不限本人使用）；口腔体检；
+                <br />
+                3) 中国联通流量卡
+                <br />
+                兑奖时间：截止到2021年3月1日
+                <br />
+                兑奖地址：长春市内联通营业厅登记统一存入
+                <br />
+                联系电话：无
+                <br />
+                注：2G/3G用户500M流量；4G用户1G流量;异地号码，非正常在用号码、已有相同流量包、融合套餐等不能使用
+                <br />
+                4) S5健身俱乐部贵宾卡
+                <br />
+                兑奖时间：截止到2021年4月30日
+                <br />
+                兑奖地址：
+                <br />
+                南关区幸福街与蔚山路交会处绿地中央广场盘古家宴旁
+                <br />
+                高新区荷园路与华光街交会处东行50米安联国际
+                <br />
+                绿园区景阳大路与春城大街交会处北行150米
+                <br />
+                联系电话：
+                <br />
+                0431—81887555；
+                <br />
+                0431—80811555；
+                <br />
+                0431—88006122
+                <br />
+                注：3店通用；单天无时间限制，器材限制使用；
+                <br />
+                5) 圣雅瑜伽SPA会所储值卡
+                <br />
+                兑奖时间：截止到2021年7月1日
+                <br />
+                兑奖地址：飞跃东路林田创客公园D栋2楼彩练新闻
+                <br />
+                联系电话：13943017772
+                <br />
+                注：每人限用1张；不含服装、垫子等费用；
+                <br />
+                6) 陶进二胡工作室
+                <br />
+                兑奖时间：截止到2021年12月31日
+                <br />
+                兑奖地址：飞跃东路林田创客公园D栋2楼彩练新闻
+                <br />
+                联系电话：13943017772
+                <br />
+                注：学习二胡免一次课时费；
+                <br />
+                7) 蛋壳科技VR体验卡
+                <br />
+                兑奖时间：截止到2021年7月1日
+                <br />
+                兑奖地址：
+                <br />
+                同志街与同光路交会处联通营业厅；
+                <br />
+                联通营业厅前进大街店；
+                <br />
+                联系电话：无
+                <br />
+                注意：VR互动实战体验一次
+                <br />
+                活动最终解释权归彩练新闻所有。
+            </div>
+            <div class="line"></div>
+            <div class="qued">确定</div>
+        </div>
+</body>
+
+</html>

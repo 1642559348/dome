@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .box1 {
+            width: 40%;
+            display: flex;
+            margin: 0 auto;
+            background-color: aqua;
+            background: url(./image/bg1.jpg)no-repeat 0 0/cover;
+        }
+
+        .oul {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            list-style: none;
+            justify-content: center;
+            margin: 20px auto;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .oul .img01 {
+            padding-top: 30px;
+            padding-bottom: 18px;
+            width: 50%;
+        }
+
+        .oul .img2 {
+            width: 100%;
+            height: auto;
+            padding-bottom: 20px;
+        }
+
+        .oul .oh3_01 {
+            width: 60%;
+            height: 100%;
+            line-height: 39px;
+            text-align: center;
+            margin-bottom: 20px;
+            background: url(./image/2.png) no-repeat 0 0/100%;
+        }
+
+        .h1_bg {
+            width: 60%;
+            height: 100%;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            line-height: 42px;
+            user-select: none;
+            cursor: pointer;
+            color: rgb(255, 174, 0);
+            background: url(./image/4.png) no-repeat 0 0/100%;
+        }
+
+
+        /* PC */
+        @media screen and (min-width: 992px) {
+            .box1 {
+                width: 50%;
+            }
+            .h1_bg {
+                padding: 13px;
+                line-height: 31px;
+                font-size: 30px;
+            }
+            
+            .oh3_01 {
+                line-height: 32px;
+                color: rgb(255, 123, 0);
+                height: none;
+                line-height: 34px;
+            }
+        }
+
+        /* 移动端 */
+        @media screen and (max-width: 768px) {
+            .box1 {
+                width: 90%;
+                line-height: 15px;
+            }
+
+            .oh3_01 {
+                font-size: 15px;
+                line-height: 11px;
+                color: rgb(255, 136, 0);
+            }
+
+            .oul .oh3_01 {
+                line-height: 19px;
+            }
+
+            .h1_bg {
+                padding: 12px;
+                font-size: 4px;
+                line-height: 13px;
+            }
+
+
+
+            /* ipad */
+            @media screen and (min-width:768px) and (max-width:992px) {
+
+                .oul {
+                    line-height: 25px;
+                }
+
+                .oul .oh3_01 {
+                    line-height: 35px;
+                }
+
+                .oh3_01 {
+                    font-size: 26px;
+                }
+
+                .h1_bg {
+                    font-size: 25px;
+                    line-height: 43px;
+                }
+
+            }
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var a = document.getElementById("a")
+            a.onclick = function () {
+                setTimeout(function () {
+                    location.href = "/index2.html"
+                }, 2000)
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="box1">
+        <div class="oul">
+            <img class="img01" src="./image/1.png" alt="">
+            <h3 class="oh3_01">2020</h3>
+            <img class="img2" src="./image/3.png" alt="">
+            <span id="a" class="h1_bg">开始游戏</span>
+        </div>
+    </div>
+</body>
+
+</html>
